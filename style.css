@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, Tahoma, sans-serif;
+  }
+  .-game-blocks .row{
+    height: 70px;
+  }
+  .control-buttons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .control-buttons span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+.info-container{
+    border:2px solid #2196f3;
+    margin-top: 5px;
+    background-color: #F6F6F6;
+}
+.info-container .name{
+    padding-left: 45px;
+}
+.info-container .tries{
+    padding-left: 280px;
+}
+.game-blocks .block .back img{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.game-blocks .block{
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+ .game-blocks .block .front {
+  background-color: #333;
+  width:100%;
+  height:100%;
+  position: absolute;
+
+} 
+
+.game-blocks .block .back {
+  transform: rotateY(180deg);
+  width:100%;
+
+}
+
+
+.game-blocks .block .face {
+   /* position: absolute;
+  width: 100%;
+  height: 100%;   */
+  text-align: center;
+  border: 5px solid #2196F3;
+  backface-visibility: hidden;
+}
+.game-blocks.no-clicking {
+  pointer-events: none;
+}
+ .game-blocks .block .front:before{
+  content: '!';
+color: #FFF;
+font-size: 100px;
+font-weight: bold;
+
+} 
+.game-blocks  .block.is-flipped,
+.game-blocks .block.has-match {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+   
